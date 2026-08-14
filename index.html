@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Project D Tinker 75 Configurator</title>
+  <style>
+    :root { color-scheme: light; --ink:#17212b; --muted:#607080; --line:#d8e0e7; --panel:#fff; --wash:#f3f6f8; --accent:#1769aa; --good:#157347; --bad:#b42318; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--wash); font:14px system-ui,-apple-system,Segoe UI,sans-serif; }
+    header { background:#17212b; color:#fff; padding:20px max(20px,calc((100vw - 1180px)/2)); display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    h1 { font-size:20px; margin:0 0 4px; letter-spacing:0; } header p { margin:0; color:#c5d0d8; }
+    main { max-width:1180px; margin:22px auto; padding:0 20px; display:grid; gap:16px; }
+    section { background:var(--panel); border:1px solid var(--line); border-radius:7px; padding:18px; }
+    .toolbar { display:flex; align-items:center; flex-wrap:wrap; gap:10px; } button, input, select { font:inherit; }
+    button { border:1px solid #aebbc6; background:#fff; color:var(--ink); border-radius:5px; padding:8px 12px; cursor:pointer; }
+    button.primary { background:var(--accent); border-color:var(--accent); color:#fff; } button:disabled { opacity:.5; cursor:not-allowed; }
+    .status { margin-left:auto; color:var(--muted); } .status.ok { color:var(--good); } .status.error { color:var(--bad); }
+    .layout { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:16px; } h2 { font-size:16px; margin:0 0 12px; }
+    .layers { display:flex; gap:6px; margin-bottom:12px; } .layers button.active { background:#e1effa; border-color:#76add5; color:#07558e; }
+    .keymap { display:grid; grid-template-columns:repeat(8,minmax(50px,1fr)); gap:6px; }
+    .key { min-height:58px; padding:5px; background:#f8fafb; border:1px solid var(--line); border-radius:4px; text-align:left; overflow:hidden; }
+    .key:hover,.key.selected { border-color:var(--accent); background:#edf6fc; } .key small { display:block; color:var(--muted); font-size:10px; } .key strong { display:block; margin-top:7px; font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .editor { position:sticky; top:16px; align-self:start; } label { display:block; color:var(--muted); margin:12px 0 5px; } input[type=text], input[type=number], select { width:100%; border:1px solid var(--line); border-radius:4px; padding:8px; }
+    .hint { color:var(--muted); line-height:1.5; } .danger { color:var(--bad); } pre { margin:0; max-height:230px; overflow:auto; background:#111820; color:#c8f1d2; padding:12px; border-radius:5px; font:11px ui-monospace,SFMono-Regular,Consolas,monospace; white-space:pre-wrap; }
+    .check { display:flex; align-items:center; gap:8px; margin-top:12px; color:var(--muted); } .check input { width:auto; }
+    @media(max-width:800px) { header { display:block; } header .toolbar { margin-top:14px; } .status { margin-left:0; } .layout { grid-template-columns:1fr; } .editor { position:static; } .keymap { grid-template-columns:repeat(4,minmax(50px,1fr)); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div><h1>Project D Tinker 75 ISO</h1><p>Local VIA-compatible configurator with lagged-response HID handling</p></div>
+    <div class="toolbar"><button id="connect" class="primary">Connect keyboard</button><button id="load">Load definition</button><input id="definition" type="file" accept="application/json" hidden><span id="status" class="status">Definition ready</span></div>
+  </header>
+  <main>
+    <section class="toolbar"><button id="read" disabled>Read keymap</button><button id="write" disabled class="primary">Write keymap</button><button id="probe" disabled>Probe protocol</button><span class="hint">VID 3233 / PID 0011. Keep one browser tab connected to the keyboard.</span></section>
+    <div class="layout">
+      <section><h2>Keymap</h2><div id="layers" class="layers"></div><div id="keymap" class="keymap"><p class="hint">Connect and read the keyboard to populate the matrix.</p></div></section>
+      <section class="editor"><h2>Selected key</h2><div id="selection" class="hint">Select a key in the matrix.</div><label for="keycode">QMK keycode (decimal or 0x hex)</label><input id="keycode" type="text" placeholder="e.g. KC_A or 0x0004"><button id="apply" disabled style="margin-top:10px">Apply to selected key</button><p class="hint">Keycodes are written to the selected layer, row, and column. The matrix is 11 rows by 8 columns; layout gaps are intentionally not sent to the keyboard.</p><label class="check"><input id="double" type="checkbox" checked> Use two-exchange compatibility mode</label></section>
+    </div>
+    <section><h2>Transaction log</h2><pre id="log">No HID transactions yet.</pre></section>
+  </main>
+  <script>
+    const CONFIG = {name:'ProjectD 75% ISO', vendorId:0x3233, productId:0x0011, rows:11, cols:8};
+    const CMD = {protocol:1, getValue:2, setValue:3, getKey:4, setKey:5, getBuffer:18, setBuffer:19, getLayers:11};
+    const HID = {device:null, busy:false, queue:Promise.resolve()};
+    const state = {layers:4, active:0, matrix:[], selected:null};
+    const $ = id => document.getElementById(id);
+    const log = (msg, bad=false) => { const el=$('log'); if(el.textContent==='No HID transactions yet.') el.textContent=''; el.textContent += (bad?'ERROR ':'') + msg + '\n'; el.scrollTop=el.scrollHeight; };
+    const status = (msg, type='') => { $('status').textContent=msg; $('status').className='status '+type; };
+    const hex = (n, width=2) => Number(n||0).toString(16).padStart(width,'0');
+    const bytes = a => [...a].map(n=>hex(n)).join(' ');
+    const word = (hi,lo) => ((hi||0)<<8)|(lo||0);
+    const parseCode = value => { const v=value.trim().toUpperCase(); if(/^0X[0-9A-F]+$/.test(v)) return parseInt(v,16); if(/^\d+$/.test(v)) return Number(v); const aliases={KC_NO:0,KC_A:4,KC_B:5,KC_C:6,KC_D:7,KC_E:8,KC_F:9,KC_G:10,KC_H:11,KC_I:12,KC_J:13,KC_K:14,KC_L:15,KC_M:16,KC_N:17,KC_O:18,KC_P:19,KC_Q:20,KC_R:21,KC_S:22,KC_T:23,KC_U:24,KC_V:25,KC_W:26,KC_X:27,KC_Y:28,KC_Z:29,KC_ESC:41,KC_ENTER:40,KC_SPACE:44,KC_BSPC:42,KC_TAB:43,KC_LSFT:225,KC_RSFT:229,KC_LCTL:224,KC_LALT:226,KC_LGUI:227}; return aliases[v]; };
+    const nameCode = code => { const names={0:'KC_NO',4:'A',5:'B',6:'C',7:'D',8:'E',9:'F',10:'G',11:'H',12:'I',13:'J',14:'K',15:'L',16:'M',17:'N',18:'O',19:'P',20:'Q',21:'R',22:'S',23:'T',24:'U',25:'V',26:'W',27:'X',28:'Y',29:'Z',40:'ENTER',41:'ESC',42:'BACKSPACE',43:'TAB',44:'SPACE',225:'LSHIFT',229:'RSHIFT',224:'LCTRL',226:'LALT',227:'LGUI'}; return names[code] || '0x'+hex(code,4); };
+    function drawLayers(){ $('layers').replaceChildren(...Array.from({length:state.layers},(_,i)=>{const b=document.createElement('button'); b.textContent='Layer '+i; b.className=i===state.active?'active':''; b.onclick=()=>{state.active=i; drawLayers(); drawKeymap();}; return b;})); }
+    function drawKeymap(){ const root=$('keymap'); root.replaceChildren(); const layer=state.matrix[state.active]||[]; for(let r=0;r<CONFIG.rows;r++) for(let c=0;c<CONFIG.cols;c++){const i=r*CONFIG.cols+c,b=document.createElement('button'); b.className='key'+(state.selected?.layer===state.active&&state.selected?.row===r&&state.selected?.col===c?' selected':''); b.innerHTML='<small>'+r+','+c+'</small><strong>'+nameCode(layer[i]||0)+'</strong>'; b.onclick=()=>selectKey(r,c); root.appendChild(b);} }
+    function selectKey(row,col){state.selected={layer:state.active,row,col}; $('selection').textContent='Layer '+state.active+', row '+row+', column '+col; $('keycode').value='0x'+hex(state.matrix[state.active][row*CONFIG.cols+col]||0,4); $('apply').disabled=false; drawKeymap();}
+    function frame(command,payload=[]){const out=new Uint8Array(32); out[0]=command; payload.slice(0,31).forEach((n,i)=>out[i+1]=n&255); return out;}
+    // VIA reports echo the command prefix; the remaining bytes are response data.
+    function validResponse(sent,received,prefixLength){ for(let i=0;i<prefixLength;i++) if(sent[i]!==received[i]) return false; return true; }
+    async function exchange(command,payload=[],label='') {
+      if(!HID.device) throw Error('Keyboard is not connected');
+      const sent=frame(command,payload);
+      const run=async()=>{
+        const twice=$('double').checked;
+        let response;
+        for(let attempt=0;attempt<(twice?2:1);attempt++) {
+          response=await new Promise((resolve,reject)=>{
+            const handler=e=>{ HID.device.removeEventListener('inputreport',handler); resolve(new Uint8Array(e.data.buffer)); };
+            HID.device.addEventListener('inputreport',handler);
+            HID.device.sendReport(0,sent).catch(e=>{ HID.device.removeEventListener('inputreport',handler); reject(e); });
+          });
+          log((twice?'exchange '+(attempt+1)+'/2 ':'')+label+'  TX '+bytes(sent.slice(0,Math.min(10,2+payload.length))));
+          log('RX '+bytes(response.slice(0,Math.min(12,response.length))));
+        }
+        if(!validResponse(sent,response,1+payload.length)) throw Error('Response did not match command after '+(twice?'two':'one')+' exchange(s)');
+        return response;
+      };
+      const result=HID.queue.then(run);
+      HID.queue=result.catch(()=>{});
+      return result;
+    }
+    async function connect(){ try { if(!('hid' in navigator)) throw Error('WebHID is unavailable. Use Chrome or Edge on localhost/HTTPS.'); const devices=await navigator.hid.requestDevice({filters:[{vendorId:CONFIG.vendorId,productId:CONFIG.productId}]}); if(!devices[0]) return; HID.device=devices[0]; await HID.device.open(); $('read').disabled=$('write').disabled=$('probe').disabled=false; status('Connected: '+(HID.device.productName||'Project D'),'ok'); log('Connected '+HID.device.vendorId.toString(16)+':'+HID.device.productId.toString(16)); }catch(e){status(e.message,'error');log(e.message,true);} }
+    async function probe(){try{status('Probing...');const r=await exchange(CMD.protocol,[],'GET_PROTOCOL_VERSION');status('Protocol '+word(r[1],r[2]),'ok');}catch(e){status(e.message,'error');log(e.message,true);}}
+    async function readKeymap(){try{status('Reading keymap...');state.matrix=[]; let count=4; try {const r=await exchange(CMD.getLayers,[],'GET_LAYER_COUNT'); count=Math.max(1,Math.min(8,r[1]||4));}catch(_){} state.layers=count; const total=CONFIG.rows*CONFIG.cols; for(let l=0;l<count;l++){const data=[];for(let offset=0;offset<total*2;offset+=28){const size=Math.min(28,total*2-offset),r=await exchange(CMD.getBuffer,[(l*total*2+offset)>>8,(l*total*2+offset)&255,size],'GET_BUFFER');data.push(...r.slice(4,4+size));} state.matrix.push(Array.from({length:total},(_,i)=>word(data[i*2],data[i*2+1])));} drawLayers();drawKeymap();status('Keymap read','ok');}catch(e){status(e.message,'error');log(e.message,true);}}
+    async function writeKeymap(){try{status('Writing keymap...');const flat=state.matrix.flatMap(layer=>layer.flatMap(v=>[(v>>8)&255,v&255]));for(let offset=0;offset<flat.length;offset+=28){const chunk=flat.slice(offset,offset+28);await exchange(CMD.setBuffer,[(offset>>8)&255,offset&255,chunk.length,...chunk],'SET_BUFFER');}status('Keymap written','ok');}catch(e){status(e.message,'error');log(e.message,true);}}
+    $('connect').onclick=connect; $('probe').onclick=probe; $('read').onclick=readKeymap; $('write').onclick=writeKeymap; $('apply').onclick=()=>{const v=parseCode($('keycode').value);if(v===undefined||v<0||v>65535){status('Invalid keycode','error');return;}const s=state.selected;state.matrix[s.layer][s.row*CONFIG.cols+s.col]=v;drawKeymap();status('Key updated locally','ok');}; $('load').onclick=()=>$('definition').click(); $('definition').onchange=async e=>{try{const cfg=JSON.parse(await e.target.files[0].text());if(cfg.matrix?.rows!==11||cfg.matrix?.cols!==8) throw Error('Definition matrix is not 11 x 8');status('Definition loaded: '+cfg.name,'ok');}catch(err){status(err.message,'error');}}; if(navigator.hid) navigator.hid.addEventListener('disconnect',()=>{HID.device=null;$('read').disabled=$('write').disabled=$('probe').disabled=true;status('Keyboard disconnected','error');}); drawLayers();
+  </script>
+</body>
+</html>

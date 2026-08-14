@@ -1,0 +1,689 @@
+timestamp, productName, vendorId, productId, message
+15:03:50.778, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.789, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.793, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.793, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.815, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.816, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.817, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:50.821, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.822, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.825, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.825, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.828, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.828, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.831, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.831, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.839, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.839, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.840, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:50.843, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:50.843, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.847, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:50.848, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.852, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:50.854, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.858, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:50.858, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.862, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:50.862, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.865, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:50.865, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.977, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.978, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.981, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.981, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.986, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.986, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.987, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:50.990, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.990, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.993, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.993, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.996, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.996, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:50.999, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:50.999, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.005, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.005, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.006, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:51.008, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:51.008, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.011, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:51.011, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.015, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:51.015, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.019, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:51.019, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.023, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:51.023, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.026, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:51.026, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.247, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.248, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.251, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.252, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.255, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.255, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.256, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:51.259, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.260, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.262, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.263, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.266, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.267, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.270, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.271, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.277, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.278, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.278, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:51.281, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:51.282, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.285, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:51.286, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.289, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:51.290, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.293, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:51.294, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.297, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:51.297, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.301, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:51.302, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.709, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.710, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.713, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.714, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.718, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.719, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.719, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:51.722, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.722, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.726, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.726, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.729, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.729, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.732, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.733, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.740, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:51.740, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.741, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:51.744, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:51.744, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.747, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:51.747, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.751, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:51.752, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.755, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:51.755, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.759, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:51.759, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:51.763, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:51.764, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.579, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.579, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.582, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.582, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.585, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.586, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.587, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:52.590, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.590, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.594, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.594, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.598, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.598, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.603, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.604, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.610, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:52.611, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.611, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:52.614, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:52.614, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.619, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:52.620, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.623, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:52.623, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.627, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:52.627, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.631, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:52.631, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:52.635, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:52.636, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.250, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.253, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.265, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.268, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.289, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.296, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.301, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:54.320, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.327, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.346, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.349, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.370, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.377, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.382, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.385, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.401, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:54.404, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.406, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:54.424, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:54.431, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.445, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:54.448, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.467, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:54.470, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.489, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:54.493, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.500, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:54.504, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:54.522, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:54.525, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.831, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.838, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.852, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.862, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.877, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.888, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.899, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:03:57.909, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.921, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.947, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.958, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.971, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:57.980, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:57.994, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:58.006, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.041, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:03:58.057, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.067, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:03:58.077, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:03:58.090, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.104, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:03:58.115, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.128, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:03:58.139, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.150, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:03:58.160, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.171, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:03:58.178, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:03:58.192, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:03:58.202, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.836, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_MACRO_GET_BUFFER_SIZE
+Command: 13
+Response: 18 0 168 8 0 40 0 69 0 66 0 67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.852, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.868, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_KEYBOARD_VALUE
+Command: 2 4
+Response: 13 0 247 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.876, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.891, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 1
+Response: 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.900, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.910, ProjectD 75% ISO, 0x3233, 0x0011, "Loading lighting/menu data failed"
+15:04:04.919, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 2
+Response: 8 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.928, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.939, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 3
+Response: 8 3 2 13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.959, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:04.971, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: CUSTOM_MENU_GET_VALUE
+Command: 8 3 4
+Response: 8 3 3 143 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:04.988, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.002, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: GET_PROTOCOL_VERSION
+Command: 1
+Response: 8 3 4 0 255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:05.010, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.025, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 0 28
+Response: 1 0 12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+15:04:05.034, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.043, ProjectD 75% ISO, 0x3233, 0x0011, "Loading device failed - retrying"
+15:04:05.055, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 28 28
+Response: 18 0 0 28 0 225 0 100 0 74 0 80 0 228 0 79 0 224 0 62 0 20 0 43 0 4 124 22 0 29 0 75"
+15:04:05.066, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.080, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 56 28
+Response: 18 0 28 28 0 53 0 30 0 26 0 57 0 22 0 0 0 27 0 78 0 58 0 31 0 8 0 60 0 7 0 61"
+15:04:05.090, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.106, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 84 28
+Response: 18 0 56 28 0 6 0 82 0 59 0 32 0 21 0 23 0 9 0 10 0 25 0 5 0 34 0 33 0 24 0 28"
+15:04:05.119, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.135, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 112 28
+Response: 18 0 84 28 0 13 0 11 0 16 0 17 0 35 0 36 0 12 0 48 0 14 0 63 0 54 0 76 0 46 0 37"
+15:04:05.145, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.162, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 140 28
+Response: 18 0 112 28 0 18 0 64 0 15 0 81 0 55 0 77 0 65 0 38 0 19 0 47 0 51 0 52 0 0 0 56"
+15:04:05.171, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
+15:04:05.185, ProjectD 75% ISO, 0x3233, 0x0011, "Command Name: DYNAMIC_KEYMAP_GET_BUFFER
+Command: 18 0 168 8
+Response: 18 0 140 28 0 45 0 39 0 227 0 229 82 33 0 226 0 44 0 230 0 0 0 70 0 0 0 42 0 50 0 68"
+15:04:05.198, ProjectD 75% ISO, 0x3233, 0x0011, "Error: Receiving incorrect response for command
+    at KeyboardAPI._hidCommand (https://www.usevia.app/assets/index-bf1817ac.js:4:10497)
+    at async KeyboardAPI.flushQueue (https://www.usevia.app/assets/index-bf1817ac.js:4:9622)"
