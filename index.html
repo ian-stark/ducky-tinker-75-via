@@ -43,7 +43,7 @@
   <script>
     const CONFIG = {name:'ProjectD 75% ISO', vendorId:0x3233, productId:0x0011, rows:11, cols:8};
     const CMD = {protocol:1, getValue:2, setValue:3, getKey:4, setKey:5, getBuffer:18, setBuffer:19, getLayers:11};
-    const HID = {device:null, busy:false, queue:Promise.resolve()};
+    const HID = {device:null, busy:false, queue:Promise.resolve(), report:null};
     const state = {layers:4, active:0, matrix:[], selected:null};
     const $ = id => document.getElementById(id);
     const log = (msg, bad=false) => { const el=$('log'); if(el.textContent==='No HID transactions yet.') el.textContent=''; el.textContent += (bad?'ERROR ':'') + msg + '\n'; el.scrollTop=el.scrollHeight; };
@@ -57,19 +57,31 @@
     function drawKeymap(){ const root=$('keymap'); root.replaceChildren(); const layer=state.matrix[state.active]||[]; for(let r=0;r<CONFIG.rows;r++) for(let c=0;c<CONFIG.cols;c++){const i=r*CONFIG.cols+c,b=document.createElement('button'); b.className='key'+(state.selected?.layer===state.active&&state.selected?.row===r&&state.selected?.col===c?' selected':''); b.innerHTML='<small>'+r+','+c+'</small><strong>'+nameCode(layer[i]||0)+'</strong>'; b.onclick=()=>selectKey(r,c); root.appendChild(b);} }
     function selectKey(row,col){state.selected={layer:state.active,row,col}; $('selection').textContent='Layer '+state.active+', row '+row+', column '+col; $('keycode').value='0x'+hex(state.matrix[state.active][row*CONFIG.cols+col]||0,4); $('apply').disabled=false; drawKeymap();}
     function frame(command,payload=[]){const out=new Uint8Array(32); out[0]=command; payload.slice(0,31).forEach((n,i)=>out[i+1]=n&255); return out;}
+    function outputReports(device){return (device.collections||[]).flatMap(c=>c.outputReports||[]);}
+    function reportSize(report){return Math.ceil((report.items||[]).reduce((bits,item)=>bits+(item.reportSize||0)*(item.reportCount||0),0)/8);}
+    function configureReport(){
+      const reports=outputReports(HID.device).map(r=>({id:r.reportId||0,size:reportSize(r)})).filter(r=>r.size>=32);
+      HID.report=reports.find(r=>r.id===0)||reports[0]||{id:0,size:32};
+      log('Output report id '+HID.report.id+', '+HID.report.size+' bytes');
+    }
+    async function ensureOpen(){if(!HID.device.opened) await HID.device.open();}
     // VIA reports echo the command prefix; the remaining bytes are response data.
     function validResponse(sent,received,prefixLength){ for(let i=0;i<prefixLength;i++) if(sent[i]!==received[i]) return false; return true; }
     async function exchange(command,payload=[],label='') {
       if(!HID.device) throw Error('Keyboard is not connected');
       const sent=frame(command,payload);
       const run=async()=>{
+        await ensureOpen();
+        if(!HID.report) configureReport();
         const twice=$('double').checked;
         let response;
         for(let attempt=0;attempt<(twice?2:1);attempt++) {
           response=await new Promise((resolve,reject)=>{
             const handler=e=>{ HID.device.removeEventListener('inputreport',handler); resolve(new Uint8Array(e.data.buffer)); };
             HID.device.addEventListener('inputreport',handler);
-            HID.device.sendReport(0,sent).catch(e=>{ HID.device.removeEventListener('inputreport',handler); reject(e); });
+            const report=HID.report.size===sent.length?sent:new Uint8Array(HID.report.size);
+            report.set(sent.subarray(0,Math.min(sent.length,report.length)));
+            HID.device.sendReport(HID.report.id,report).catch(e=>{ HID.device.removeEventListener('inputreport',handler); reject(Error('Failed to write HID output report (id '+HID.report.id+', '+report.length+' bytes): '+e.message)); });
           });
           log((twice?'exchange '+(attempt+1)+'/2 ':'')+label+'  TX '+bytes(sent.slice(0,Math.min(10,2+payload.length))));
           log('RX '+bytes(response.slice(0,Math.min(12,response.length))));
@@ -81,11 +93,11 @@
       HID.queue=result.catch(()=>{});
       return result;
     }
-    async function connect(){ try { if(!('hid' in navigator)) throw Error('WebHID is unavailable. Use Chrome or Edge on localhost/HTTPS.'); const devices=await navigator.hid.requestDevice({filters:[{vendorId:CONFIG.vendorId,productId:CONFIG.productId}]}); if(!devices[0]) return; HID.device=devices[0]; await HID.device.open(); $('read').disabled=$('write').disabled=$('probe').disabled=false; status('Connected: '+(HID.device.productName||'Project D'),'ok'); log('Connected '+HID.device.vendorId.toString(16)+':'+HID.device.productId.toString(16)); }catch(e){status(e.message,'error');log(e.message,true);} }
+    async function connect(){ try { if(!('hid' in navigator)) throw Error('WebHID is unavailable. Use Chrome or Edge on localhost/HTTPS.'); const devices=await navigator.hid.requestDevice({filters:[{vendorId:CONFIG.vendorId,productId:CONFIG.productId}]}); if(!devices[0]) return; HID.device=devices[0]; HID.report=null; await HID.device.open(); configureReport(); $('read').disabled=$('write').disabled=$('probe').disabled=false; status('Connected: '+(HID.device.productName||'Project D'),'ok'); log('Connected '+HID.device.vendorId.toString(16)+':'+HID.device.productId.toString(16)); }catch(e){status(e.message,'error');log(e.message,true);} }
     async function probe(){try{status('Probing...');const r=await exchange(CMD.protocol,[],'GET_PROTOCOL_VERSION');status('Protocol '+word(r[1],r[2]),'ok');}catch(e){status(e.message,'error');log(e.message,true);}}
     async function readKeymap(){try{status('Reading keymap...');state.matrix=[]; let count=4; try {const r=await exchange(CMD.getLayers,[],'GET_LAYER_COUNT'); count=Math.max(1,Math.min(8,r[1]||4));}catch(_){} state.layers=count; const total=CONFIG.rows*CONFIG.cols; for(let l=0;l<count;l++){const data=[];for(let offset=0;offset<total*2;offset+=28){const size=Math.min(28,total*2-offset),r=await exchange(CMD.getBuffer,[(l*total*2+offset)>>8,(l*total*2+offset)&255,size],'GET_BUFFER');data.push(...r.slice(4,4+size));} state.matrix.push(Array.from({length:total},(_,i)=>word(data[i*2],data[i*2+1])));} drawLayers();drawKeymap();status('Keymap read','ok');}catch(e){status(e.message,'error');log(e.message,true);}}
     async function writeKeymap(){try{status('Writing keymap...');const flat=state.matrix.flatMap(layer=>layer.flatMap(v=>[(v>>8)&255,v&255]));for(let offset=0;offset<flat.length;offset+=28){const chunk=flat.slice(offset,offset+28);await exchange(CMD.setBuffer,[(offset>>8)&255,offset&255,chunk.length,...chunk],'SET_BUFFER');}status('Keymap written','ok');}catch(e){status(e.message,'error');log(e.message,true);}}
-    $('connect').onclick=connect; $('probe').onclick=probe; $('read').onclick=readKeymap; $('write').onclick=writeKeymap; $('apply').onclick=()=>{const v=parseCode($('keycode').value);if(v===undefined||v<0||v>65535){status('Invalid keycode','error');return;}const s=state.selected;state.matrix[s.layer][s.row*CONFIG.cols+s.col]=v;drawKeymap();status('Key updated locally','ok');}; $('load').onclick=()=>$('definition').click(); $('definition').onchange=async e=>{try{const cfg=JSON.parse(await e.target.files[0].text());if(cfg.matrix?.rows!==11||cfg.matrix?.cols!==8) throw Error('Definition matrix is not 11 x 8');status('Definition loaded: '+cfg.name,'ok');}catch(err){status(err.message,'error');}}; if(navigator.hid) navigator.hid.addEventListener('disconnect',()=>{HID.device=null;$('read').disabled=$('write').disabled=$('probe').disabled=true;status('Keyboard disconnected','error');}); drawLayers();
+    $('connect').onclick=connect; $('probe').onclick=probe; $('read').onclick=readKeymap; $('write').onclick=writeKeymap; $('apply').onclick=()=>{const v=parseCode($('keycode').value);if(v===undefined||v<0||v>65535){status('Invalid keycode','error');return;}const s=state.selected;state.matrix[s.layer][s.row*CONFIG.cols+s.col]=v;drawKeymap();status('Key updated locally','ok');}; $('load').onclick=()=>$('definition').click(); $('definition').onchange=async e=>{try{const cfg=JSON.parse(await e.target.files[0].text());if(cfg.matrix?.rows!==11||cfg.matrix?.cols!==8) throw Error('Definition matrix is not 11 x 8');status('Definition loaded: '+cfg.name,'ok');}catch(err){status(err.message,'error');}}; if(navigator.hid) navigator.hid.addEventListener('disconnect',()=>{HID.device=null;HID.report=null;$('read').disabled=$('write').disabled=$('probe').disabled=true;status('Keyboard disconnected','error');}); drawLayers();
   </script>
 </body>
 </html>
