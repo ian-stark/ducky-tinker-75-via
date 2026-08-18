@@ -4,7 +4,11 @@ This is a small, local WebHID configurator for the Ducky Project D Tinker 75 ISO
 
 Created with OpenAI Codex (GPT-5) on 18 August 2026.
 
-The supplied [error log](VIA-app-errors.csv) shows that the keyboard returns the previous command's response. Standard VIA sends one command and validates the immediately returned report, so every command appears invalid and the queue drifts. This app defaults to a two-exchange compatibility mode: it repeats each command and validates the second response. Commands are serialized so reads and writes cannot overlap.
+This keyboard was originally configurable with a web-based tool hosted by the manufacturers.  That's no longer available and although the keyboard seems to broadly follow standard VIA protocols there's some incompatibility that means the open-source [UseVIA app](https://usevia.app) fails.
+
+The [error log](VIA-app-errors.csv) from UseVIA shows an off-by-one problem: each interaction with the keyboard returns the previous command's response. This alternative app defaults to a two-exchange compatibility mode: it repeats each command and validates the second response. Commands are serialized so reads and writes cannot overlap. All commands are idempotent so the repetition is not a problem.
+
+The app lacks many features of UseVIA — most notably, the keyboard matrix is presented as a raw grid rather than mapped to the physical layout.
 
 ## Use
 
@@ -37,7 +41,5 @@ powershell -ExecutionPolicy Bypass -File .\serve.ps1
 ```
 
 The [JSON keyboard definition](Ducky_ProjectD_75_iso.json) is retained as the source description, but the transport does not depend on the definition being sideloaded into standard VIA. The matrix is fixed to the observed 11 x 8 Tinker 75 matrix and the app uses VIA dynamic-keymap buffer commands.
-
-Historically, the manufacturer's original configurator is no longer available online, and the standard VIA app does not appear to work with this keyboard. That is why the error log is provided and this local compatibility configurator is needed.
 
 The configurator has been tested with a physically connected Tinker 75. The transaction log is intentionally visible; keep it when reporting a failed exchange.
